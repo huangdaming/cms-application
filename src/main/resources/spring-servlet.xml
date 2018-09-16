@@ -26,6 +26,8 @@
                     </list>
                 </property>
             </bean>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
         </mvc:message-converters>
     </mvc:annotation-driven>
 
@@ -34,7 +36,7 @@
 
     <!-- 视图解析器 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/view/"></property>
+        <property name="prefix" value="/jsp/"></property>
         <property name="suffix" value=".jsp"></property>
     </bean>
 
